@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wordle Game</title>
+  <meta name="description" content="This website can be used to play wordle.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <h3 class="main-heading">Wordle Game</h3>
+  <div class="game-space">
+    <div class="text-grid">
+      <div class="text-grid-row row0">
+        <input class="grid-text row0" type="text" maxlength="1" id="00">
+        <input class="grid-text row0" type="text" maxlength="1" id="01">
+        <input class="grid-text row0" type="text" maxlength="1" id="02">
+        <input class="grid-text row0" type="text" maxlength="1" id="03">
+        <input class="grid-text row0" type="text" maxlength="1" id="04">
+      </div>
+      <div class="text-grid-row row1">
+        <input class="grid-text row1" type="text" maxlength="1" id="10" disabled>
+        <input class="grid-text row1" type="text" maxlength="1" id="11" disabled>
+        <input class="grid-text row1" type="text" maxlength="1" id="12" disabled>
+        <input class="grid-text row1" type="text" maxlength="1" id="13" disabled>
+        <input class="grid-text row1" type="text" maxlength="1" id="14" disabled>
+      </div>
+      <div class="text-grid-row row2">
+        <input class="grid-text row2" type="text" maxlength="1" id="20" disabled>
+        <input class="grid-text row2" type="text" maxlength="1" id="21" disabled>
+        <input class="grid-text row2" type="text" maxlength="1" id="22" disabled>
+        <input class="grid-text row2" type="text" maxlength="1" id="23" disabled>
+        <input class="grid-text row2" type="text" maxlength="1" id="24" disabled>
+      </div>
+      <div class="text-grid-row row3">
+        <input class="grid-text row3" type="text" maxlength="1" id="30" disabled>
+        <input class="grid-text row3" type="text" maxlength="1" id="31" disabled>
+        <input class="grid-text row3" type="text" maxlength="1" id="32" disabled>
+        <input class="grid-text row3" type="text" maxlength="1" id="33" disabled>
+        <input class="grid-text row3" type="text" maxlength="1" id="34" disabled>
+      </div>
+      <div class="text-grid-row row4">
+        <input class="grid-text row4" type="text" maxlength="1" id="40" disabled>
+        <input class="grid-text row4" type="text" maxlength="1" id="41" disabled>
+        <input class="grid-text row4" type="text" maxlength="1" id="42" disabled>
+        <input class="grid-text row4" type="text" maxlength="1" id="43" disabled>
+        <input class="grid-text row4" type="text" maxlength="1" id="44" disabled>
+      </div>
+      <div class="text-grid-row row5">
+        <input class="grid-text row5" type="text" maxlength="1" id="50" disabled>
+        <input class="grid-text row5" type="text" maxlength="1" id="51" disabled>
+        <input class="grid-text row5" type="text" maxlength="1" id="52" disabled>
+        <input class="grid-text row5" type="text" maxlength="1" id="53" disabled>
+        <input class="grid-text row5" type="text" maxlength="1" id="54" disabled>
+      </div>
+    </div>
+    <button class="submit-button" id="submit-button" onclick="submitWordle()"> <i class="fas fa-angle-right fa-3x"></i>
+    </button>
+    <button class="reset-button" id="reset-button" onclick="resetWordle()"><i class="fas fa-undo fa-3x"></i> </button>
+
+  </div>
+  <script src="main.js" async defer></script>
+</body>
+
+</html>
