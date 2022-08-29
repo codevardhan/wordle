@@ -2320,7 +2320,8 @@ var game_running = true;
 const submit_button = document.getElementById("submit-button");
 const reset_button = document.getElementById("reset-button");
 const result_text = document.getElementById("result-text");
-console.log(targetWord);
+const losing_message = `Oops! You have run out of tries! The correct word is ${targetWord}! Press the reset button to try another word :\)`;
+const winning_message = "Congrats!! You have guessed correctly! Press the reset button to try another word ;)";
 resetWordle();
 
 function submitWordle() {
@@ -2408,7 +2409,7 @@ function handleWin() {
   disableRow(currentRow);
 
   reset_button.style.visibility = "visible";
-  result_text.innerHTML = "Congrats!! You have guessed correctly! Press the reset button to try another word ;)";
+  result_text.innerHTML = winning_message;
 }
 
 function handleLoss() {
@@ -2417,21 +2418,22 @@ function handleLoss() {
   disableRow(currentRow);
 
   reset_button.style.visibility = "visible";
-  result_text.innerHTML = "Oops! You have run out of tries! Press the reset button to try another word :\")";
+  result_text.innerHTML = losing_message;
 }
 
 function resetWordle() {
   game_running = true;
   submit_button.style.pointerEvents = "auto";
   reset_button.style.visibility = "hidden";
-  for (let i = 0; i <= currentRow; i++) {
+  for (let i = 0; i <= 5; i++) {
     for (let j = 0; j <= 4; j++) {
       let box = document.getElementById(`${i}${j}`);
       box.classList.remove("Y");
       box.classList.remove("G");
       box.classList.remove("N");
       box.value = "";
-    }
+      disableRow(i);
+    } 
   }
   currentRow = 0;
   enableRow(currentRow);
