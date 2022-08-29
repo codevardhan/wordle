@@ -49,7 +49,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin-left: 5px;
-  color: rgb(3, 79, 145);
+  color: rgb(180, 202, 221);
   border: none;
 }
 
@@ -84,15 +84,15 @@ body {
 
 
 .Y {
-  background-color: yellow
+  background-color: rgb(181, 159, 59)
 }
 
 .G {
-  background-color: green
+  background-color: rgb(83, 141, 78)
 }
 
 .N {
-  background-color: gray
+  background-color: rgb(88, 88, 90)
 }
 
 .result-text {

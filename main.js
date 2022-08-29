@@ -2326,10 +2326,10 @@ resetWordle();
 
 function submitWordle() {
   if (!game_running) { return; }
-  if (currentRow == 5) { handleLoss(); return}
   var currentWord = "";
   var colourChanges = ["N", "N", "N", "N", "N"];
   row = document.getElementsByClassName(`row${currentRow}`);
+
   for (let i = 1; i <= 5; i++){
     currentWord += row[i].value.toUpperCase();
     if (row[i].value.toUpperCase() == "") {
@@ -2361,6 +2361,8 @@ function submitWordle() {
   }
 
   makeColourChanges(colourChanges);
+  
+  if (currentRow == 5) { handleLoss(); return}
 
   var colorSet = new Set(colourChanges);
   const [first] = colorSet;
